@@ -1,0 +1,26 @@
+
+[inpCreate a new Directory]
+0=log
+1=www
+
+[input2]
+0=/home/torney
+1=/home/torney/www
+
+[input-def]
+0=*
+
+[Dir Hist New Right Panel]
+0=/home/torney
+1=/home
+2=/
+3=/var/www
+4=/var/www/www
+
+[cmdline]
+0=cd var/www
+1=cd /var/www
+
+[Dir Hist New Left Panel]
+0=/home/torney
+1=/home/torney/www
