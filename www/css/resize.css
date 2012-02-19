@@ -1,0 +1,131 @@
+body {
+	text-align: left;
+	font-family: tahoma;
+	line-height: 20px;	
+	color: #666;
+	font-size: 12px;
+	padding: 0px;
+	margin: 0px;	
+}
+
+h1 {
+	font-size: 16px;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+
+p {
+	float: left;
+	clear: left;
+}
+
+pre {
+	float: left;
+	clear: left;
+}
+
+
+
+ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;	
+	margin-bottom: 40px;
+	float: left;
+	clear: left;	
+}
+
+ul li {
+	float: left;
+	clear: left;
+	margin-bottom: 10px;
+}
+
+ul li a {
+	float: left;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	background-color: #ffa70e;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	margin-right: 10px;
+}
+
+label {
+	width: 160px;
+	float: left;	
+}
+
+input {
+	float: left;	
+	margin-right: 6px;
+}
+
+.text-input {
+	width: 40px;
+	height: 16px;
+	border: 1px solid #666;
+}
+.text-input2 {
+	width: 200px;
+	height: 16px;
+	border: 1px solid #666;
+}
+
+#settings {
+	float: left;
+	clear: left;
+	margin-left: 40px;	
+	margin-top: 40px;
+	width: 800px;
+}
+
+#wrapper {
+	float: left;
+	clear: left;
+	margin-left: 40px;	
+	margin-bottom: 40px;		
+	
+}
+
+#editor {	
+	position: relative;	
+	background-color: #666;
+	border: 1px solid #000;	
+	background-repeat: no-repeat; 
+}
+
+.tip {
+	color: #aaa;
+}
+
+#crop_area { 
+	width: 50px; 
+	height: 50px; 	
+	background-image: url('../crop_area.png'); 
+	background-repeat: repeat; 
+	background-color: transparent; 
+	float: left;
+	cursor: move;
+}	
+
+#info {
+	float: left;	
+	margin-left: 40px;
+}
+
+#noscript {
+	display: none;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	text-align: left;	
+	float: left;
+	background-color: #FFE4B5;
+	padding-left: 40px;
+}

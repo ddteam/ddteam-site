@@ -1,0 +1,16 @@
+routes:
+  TinymceImageIndex: 
+    type: Zend_Controller_Router_Route_Static
+    route: tinymce/image.html
+    defaults: 
+      module: tinymce
+      controller: image
+      action: index
+
+  TinymceImageDelete: 
+    type: Zend_Controller_Router_Route
+    route: tinymce/id/:id/delete-image.html
+    defaults: 
+      module: tinymce
+      controller: image
+      action: delete            

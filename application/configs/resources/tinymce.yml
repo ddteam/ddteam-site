@@ -1,0 +1,2 @@
+tinymce.image.index:  {rule: _TRUE_}
+tinymce.image.delete: {rule: image_in_params_and_image_exist, handler: not_found}

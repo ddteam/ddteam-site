@@ -1,0 +1,19 @@
+routes:
+  ConfirmationIndexAccept: 
+    type: Zend_Controller_Router_Route
+    route: confirmation/:hash/accept.html
+    defaults: 
+      module: confirmation
+      controller: index
+      action: accept
+      reply: ACTION_ACCEPT
+
+  ConfirmationIndexDecline: 
+    type: Zend_Controller_Router_Route
+    route: confirmation/:hash/decline.html
+    defaults: 
+      module: confirmation
+      controller: index
+      action: decline
+      reply: ACTION_DECLINE
+            

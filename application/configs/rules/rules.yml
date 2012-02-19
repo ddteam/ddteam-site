@@ -1,0 +1,62 @@
+User:
+  user_logged_in_or_in_params:
+    type: OR
+    dependences: [real_user_in_params, no_user_in_params_and_logged_in]
+  real_user_in_params:
+    type: AND
+    dependences: [user_in_params, user_exist]
+  no_user_in_params_and_logged_in:
+    type: AND
+    dependences: [!user_in_params, logged_in]
+  user_in_params:
+    type: FUNC
+  user_exist:
+    type: FUNC
+  logged_in:
+    type: FUNC
+  allowed_to_auth:
+    type: OR
+    dependences: [!logged_in, is_post]
+  is_post:
+    type: FUNC
+  not_logged_in_and_user_exist_by_email_and_role_and_not_confirmed:
+    type: AND
+    dependences: [!logged_in, user_exist_by_email_and_role, user_not_confirmed]
+  user_exist_by_email_and_role:
+    type: FUNC
+  user_not_confirmed:
+    type: FUNC
+  is_post:
+    type: FUNC
+
+Confirmation:
+  hash_exist:
+    type: FUNC
+
+Admin:
+  admin_logged_in:
+    type: FUNC
+  allowed_edit_cms_page:
+    type: AND
+    dependences: [admin_logged_in, cms_page_exists]
+  allowed_add_cms_page:
+    type: AND
+    dependences: [admin_logged_in, add_page_allowed]
+  allowed_to_auth_admin:
+    type: OR
+    dependences: [!logged_in, is_post]
+  allowed_delete_cms_page:
+    type: AND
+    dependences: [admin_logged_in, delete_page_allowed, cms_page_exists]  
+  cms_page_exists:
+    type: FUNC
+  add_page_allowed:
+    type: FUNC
+  edit_page_allowed:
+    type: FUNC
+  delete_page_allowed:
+    type: FUNC
+  change_page_name_allowed:
+    type: FUNC
+  change_page_route_allowed:
+    type: FUNC

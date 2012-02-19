@@ -1,0 +1,4 @@
+TinyMce:
+  image_in_params_and_image_exist:
+    type: AND
+    dependences: [image_in_params, image_exists]

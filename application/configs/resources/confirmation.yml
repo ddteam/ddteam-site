@@ -1,0 +1,3 @@
+confirmation.index.accept: {rule: hash_exist, handler: not_found}
+confirmation.index.decline: {rule: hash_exist, handler: not_found}
+confirmation.user.registration: {rule: !logged_in, handler: forbidden}

@@ -1,0 +1,23 @@
+<?php
+$this->addHelperPath('../application/modules/default/views/helpers/', 'Default_View_Helper');
+echo $this->headertag($this->page); 
+?>
+
+<div class="primary_content_wrap">
+<div class="container_24">
+<div class="grid_24">
+<div class="wrapper">
+<header>
+<h1><?=$this->page->title;?></h1>
+</header>
+ 
+<div class="post-content">
+<?=$this->page->contents;?>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+

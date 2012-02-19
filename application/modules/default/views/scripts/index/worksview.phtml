@@ -1,0 +1,89 @@
+<?php 
+$this->addHelperPath('../application/modules/default/views/helpers/', 'Default_View_Helper');
+echo $this->headertag($this->category); 
+?>
+    <script>
+        $(document).ready(function(){
+            //Examples of how to assign the ColorBox event to elements
+            $(".clearfix").each(function (i) {
+                $(".image-wrap", this).colorbox({rel:'image-wrap-'+i});
+            });
+            $(".callbacks").colorbox({
+                onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+                onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+                onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+                onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+                onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+            });
+            
+            //Example of preserving a JavaScript event for inline calls.
+            $("#click").click(function(){ 
+                $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+                return false;
+            });
+        });
+    </script>
+
+
+<div class="primary_content_wrap">
+    <div class="container_24">
+        <div class="grid_24">
+
+<div class="wrapper">
+    <div class="header-title"  style="padding-top:12px">
+        
+<h1><?=$this->category->title;?></h1>
+    </div>   
+        
+      <div id="gallery" class="one_column">
+  <ul class="portfolio">
+<?php 
+foreach ($this->works as $key => $work) {
+?>
+      <li>
+        <div class="hr"></div>
+            <div class="clearfix">
+<?php 
+    $images = array();
+    $m = false;
+    for ($i=1;$i<=30;$i++) {
+        $image = "image".$i;
+        if (!empty($work->$image)) {
+            if ($m==false) {
+            ?>
+              <span class="image-border"><a class="image-wrap attachment-portfolio-post-thumbnail-xl wp-post-image" href="/images/works/<?=$work->id?>/<?=$work->$image?>" alt="<?=$work->name?>" title="<?=$work->name?>" style="display: block; ">
+              <img width="480" height="270" src="/images/works/<?=$work->id?>/<?=$work->id?>_first.jpg" class="attachment-portfolio-post-thumbnail-xl wp-post-image" alt="<?=$work->name?>" title="<?=$work->name?>" style="display: block; ">
+              <span class="zoom-icon"></span></a></span>
+           <?php
+               $m = true;
+            } else {
+            ?> 
+              <a style="display:none;" class="image-wrap" href="/images/works/<?=$work->id?>/<?=$work->$image?>"  alt="<?=$work->name?>" title="<?=$work->name?>"></a>
+           <?php
+            }
+           
+        }
+    }
+?>
+
+          <div class="folio-desc">
+            <header>
+              <h2><a href="/<?=$work->id?>/work.html"><?=$work->name?></a></h2>
+              <time><?=$work->date?></time>
+            </header>
+            <p class="excerpt"><?php echo mb_substr(strip_tags($work->description),0,255,'UTF-8')."...";?></p>
+            <div class="link"><a href="/<?=$work->id?>/work.html">Далее...</a></div>
+          </div>
+        </div>
+      </li>
+<?php 
+}
+?>      
+      </ul>
+  <div class="clear"></div>
+</div>
+<!-- end #main -->
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configdata>
+    <routes>
+        <TinymceImageIndex>
+            <type>Zend_Controller_Router_Route_Static</type>
+            <route>tinymce/image.html</route>
+            <defaults>
+                <module>tinymce</module>
+                <controller>image</controller>
+                <action>index</action>
+            </defaults>
+        </TinymceImageIndex>
+        <TinymceImageDelete>
+            <type>Zend_Controller_Router_Route</type>
+            <route>tinymce/id/:id/delete-image.html</route>
+            <defaults>
+                <module>tinymce</module>
+                <controller>image</controller>
+                <action>delete</action>
+            </defaults>
+        </TinymceImageDelete>                          
+    </routes>
+</configdata>

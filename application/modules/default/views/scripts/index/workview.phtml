@@ -1,0 +1,87 @@
+<?php
+$this->addHelperPath('../application/modules/default/views/helpers/', 'Default_View_Helper');
+echo $this->headertag($this->work); 
+?>
+    <script>
+        $(document).ready(function(){
+            //Examples of how to assign the ColorBox event to elements
+            $(".image-wrap").colorbox({rel:'image-wrap'});
+            $(".callbacks").colorbox({
+                onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+                onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+                onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+                onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+                onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+            });
+            
+            //Example of preserving a JavaScript event for inline calls.
+            $("#click").click(function(){ 
+                $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+                return false;
+            });
+        });
+    </script>
+<div class="primary_content_wrap">
+    <div class="container_24">
+        <div class="grid_24">
+            <div class="wrapper">
+            <div class="post-287 portfolio type-portfolio status-publish hentry post" id="post-287">
+      <article class="single-post" style="padding-top:12px">
+        <header>
+          <h1><?=$this->work->name?></h1>
+        </header>
+    <div class="featured-thumbnail">
+                  
+<?php 
+    $images = array();
+    $m = false;
+    for ($i=1;$i<=30;$i++) {
+        $image = "image".$i;
+        if (!empty($this->work->$image)) {
+            if ($m==false) {
+            ?>
+           <div id="gallery" class="one_column">
+                  <a class="image-wrap" title="<?=$this->work->name?>" href="/images/works/<?=$this->work->id?>/<?=$this->work->$image?>">
+                  <img width="480" height="270" title="<?=$this->work->name?>" alt="<?=$this->work->name?>" class="attachment-portfolio-post-thumbnail-large wp-post-image" src="/images/works/<?=$this->work->id?>/<?=$this->work->id?>_first.jpg">
+                  <span class="zoom-icon" style="height:366px"></span></a>
+           </div>
+    </div>
+           <?php
+               $m = true;
+            } else {
+            ?> 
+              <a style="display:none;" class="image-wrap" href="/images/works/<?=$this->work->id?>/<?=$this->work->$image?>" title=""></a>
+           <?php
+            }
+           
+        }
+    }
+?>
+                  
+<div class="post-content"><p>
+<?=$this->work->description?>
+</p>
+<div style="height: 28px; width: 376px; text-align: left;padding-bottom: 7px; padding-left: 10px; padding-right: 10px; padding-top: 7px;">
+<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,moikrug"></div>                             </div>
+</div>
+</div><!--.post-content-->
+      </article>
+      
+    </div><!-- #post-## -->
+    
+    
+<!-- You can start editing here. -->
+
+
+            <!-- If comments are closed. -->
+        <!--p class="nocomments">Comments are closed.</p-->
+
+    
+
+
+  
+                </div><!--.wrapper-->
+         </div><!--.grid_24-->
+      </div><!--.container-->
+   </div>

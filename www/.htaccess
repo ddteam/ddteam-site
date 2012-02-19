@@ -1,7 +1,13 @@
-DirectoryIndex technical.html
-AddDefaultCharset utf-8
+php_value date.timezone "UTC"
+php_value upload_max_filesize 10M
+php_value post_max_size 15M
+Options -Indexes
+
 RewriteEngine On
 RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ /technical.html [L]
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+        

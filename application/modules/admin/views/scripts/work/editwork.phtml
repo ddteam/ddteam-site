@@ -1,0 +1,126 @@
+		<link href="/css/default.css" rel="stylesheet" type="text/css" />
+		<link href="/css/uploadify.css" rel="stylesheet" type="text/css" />
+		<link href="/css/jquery.Jcrop.css" rel="stylesheet" type="text/css" /> 
+		<script type="text/javascript" src="/scripts/swfobject.js"></script>
+		<script type="text/javascript" src="/scripts/jquery.uploadify.v2.1.4.min.js"></script>
+		<script type="text/javascript" src="/scripts/jquery-impromptu.3.1.min.js"></script>
+		<script type="text/javascript" src="/scripts/jquery.Jcrop.min.js"></script>
+		<script type="text/javascript" src="/scripts/jquery-uberuploadcropper.js"></script> 
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+<?php 
+	for ($i=1;$i<=30;$i++) {
+echo "	
+
+$('#UploadPhoto$i').uberuploadcropper({
+		//---------------------------------------------------
+		// uploadify options..
+		//---------------------------------------------------
+		'uploader'  : '/scripts/uploadify.swf',
+		'script'    : '/uploadify/uploadify.php',
+		'cancelImg' : '/uploadify/cancel.png',
+		'multi'     : false,
+		'auto'      : true,
+		'folder'    : '/uploads',
+		'fileDesc'  : 'JPG',
+		'fileExt'   : '*.jpg;*.jpeg;*.JPG;*.JPEG',
+		//---------------------------------------------------
+		//now the cropper options..
+		//---------------------------------------------------
+		'aspectRatio': 16 / 9,
+		'allowSelect': false,			//can reselect
+		'allowResize' : true,			//can resize selection
+		'setSelect': [ 0, 0, 1000, 562 ],	//these are the dimensions of the crop box x1,y1,x2,y2
+		'minSize': [ 1000, 562 ],		//if you want to be able to resize, use these
+		'cropScript': '/uploadify/crop.php',
+		'onComplete': function(imgs,data){ 
+			$('#PhotoPrev$i').attr('src','/uploads/'+imgs[0].name +'?d='+ (new Date()).getTime()); 
+			$('#file-$i').attr('value','/uploads/'+imgs[0].name);
+			$('#delete-$i').show();
+		}
+	});
+	
+	";    
+}  
+?>
+	
+});
+</script>
+<div id="zendform" class="zendform">
+<form enctype="application/x-www-form-urlencoded" class="global_form" id="editform" action="" method="post">
+<div><h3>Новая работа</h3> 
+<div class="form-elements"> 
+<dl class="zend_form">
+<?=$this->form->name?>
+<?=$this->form->date?>
+<?=$this->form->category_id?>
+<?=$this->form->status?>
+<?=$this->form->description?>
+<?=$this->form->titlehead?>
+<?=$this->form->keywordshead?>
+<?=$this->form->descriptionhead?>
+
+
+<table style="border-style:solid; 
+      border-width:2px; 
+      border-color:#333333; 
+      padding:3px;">
+	<tr>
+<?php 
+
+        	$to_work['file'] = array();
+        	for ($i=1;$i<=30;$i++) {
+        	    $image = "image$i";
+        		if (!empty($Work->$image)) {
+            		$Work->$image = $Work->id.'_'.$i.'.jpg';
+					$to_work['file'][$i] = $Work->$image;
+        		}
+			}
+
+
+for ($i=1;$i<=30;$i++) {
+$item = $i;
+$image = "image$i";
+
+echo "<td style=\"border-style:solid; 
+      border-width:1px; 
+      border-color:#333333; 
+      padding:0px;\">\n";
+
+	
+echo $this->form->$i;
+
+if (!empty($this->Work->$image)) {
+	$text = '<img style="float:right;" src="/images/works/'.$this->Work->id.'/'.$this->Work->$image.'" id="PhotoPrev'.$i.'" alt="Photo Preview" />
+	<a data-href="/admin/'.$this->Work->id.'/'.$i.'/deleteimage"  style="float:right;" data-rel="'.$i.'" class="delete_image" id="delete-'.$i.'"><img src="/images/close.png"></a>';
+	
+} else {
+	$text = '<img style="float:right;" src="/images/photo_not_available.png" id="PhotoPrev'.$i.'" alt="Photo Preview" />
+	<a data-href="/admin/'.$this->Work->id.'/'.$i.'/deleteimage" data-rel="'.$i.'" style="display: none; float:right;" class="delete_image" id="delete-'.$i.'"><img src="/images/close.png"></a>';
+}
+
+echo '<div class="upphoto"><input type="file" name="UploadPhoto'.$i.'" id="UploadPhoto'.$i.'" />
+		'.$text.'
+		</div>
+</td>
+		';
+ if (($item/3) == floor($item/3)) {echo "\n</tr>\n<tr>\n";}    
+}
+?>
+</tr>
+
+</table>
+<div><?=$this->form->submit?></div>
+<?php echo "<div><a href=/admin/work/{$this->Work->category_id}/index.html>К списку</a></div>";?>
+</dl>
+</div>
+</div>
+</form>
+</div>
+<BR><BR><BR>
+
+
+

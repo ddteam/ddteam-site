@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="cufon-active cufon-ready" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" dir="ltr" lang="en-gb">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="index, follow">
+    <?php echo $this->headTitle()?>
+    <?php echo $this->headMeta()?>
+  <meta name="rights" content="">
+  <meta name="language" content="en-GB">
+  <meta name="author" content="">
+  <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/moo_maximenuH_CK.css" type="text/css">
+  <link rel="stylesheet" href="/css/maximenuH_CK.css" type="text/css">
+  <script src="/scripts/core.js" type="text/javascript"></script>
+  <script src="/scripts/mootools-core.js" type="text/javascript"></script>
+  <script src="/scripts/caption.js" type="text/javascript"></script>
+  <script src="/scripts/mootools-more.js" type="text/javascript"></script>
+  <script src="/scripts/moo_maximenu_CK.js" type="text/javascript"></script>
+  <script src="/scripts/maximenu_addon_CK.js" type="text/javascript"></script>
+  <script type="text/javascript">
+
+        window.addEvent('domready', function() {
+            $$('.hasTip').each(function(el) {
+                var title = el.get('title');
+                if (title) {
+                    var parts = title.split('::', 2);
+                    el.store('tip:title', parts[0]);
+                    el.store('tip:text', parts[1]);
+                }
+            });
+            var JTooltips = new Tips($$('.hasTip'), { maxTitleChars: 50, fixed: false});
+        });
+window.addEvent('domready', function() {new DropdownMaxiMenu(document.getElement('div#maximenuCK'),{mooTransition : 'Quart',mooEase : 'easeOut',useOpacity : '0',dureeOut : 500,menuID : 'maximenuCK',testoverflow : '0',orientation : '0',mooDuree : 500});});
+  </script>
+
+<link rel="stylesheet" href="/css/system.css" type="text/css">
+<link rel="stylesheet" href="/css/position.css" type="text/css" media="screen,projection">
+<link rel="stylesheet" href="/css/layout.css" type="text/css" media="screen,projection">
+<link rel="stylesheet" href="/css/print.css" type="text/css" media="Print">
+<link rel="stylesheet" href="/css/general.css" type="text/css">
+<link rel="stylesheet" href="/css/personal.css" type="text/css">
+
+
+<link href="/css/css.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="/css/prettyPhoto.css" type="text/css">
+<!--[if lte IE 6]>
+        <link href="/joomla_34242/templates/theme735/css/ieonly.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+        <link href="/joomla_34242/templates/theme735/css/ie7only.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 9]>
+<style>
+.contact .inputbox, .contact input.required, .registration input, .profile-edit input, .login-fields input, .remind input, .reset input, .contact #jform_contact_message,
+input.button,  button.button, .box-bg,  .navigation, ul.gkTabs li, .maximenuCK2, .border, .acymailing_module .inputbox, p.readmore a, .nivoSlider .nivo-controlNav, 
+ul.maximenuCK li a.maximenuCK, #content .search ,.registration, .reset, .remind, .inputbox, .contact, .categories-list, .moduletable,  .button, div.floatCK, 
+ul.maximenuCK li.level0 li a, #maximenuCK,  button.validate, .item-page,  #content, .button, button, .readmore, .registration a, .service li {
+ behavior:url(/css/PIE.php);
+}
+</style>
+<![endif]-->
+<!--[if lt IE 7]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" &nbsp;alt="" /></a>
+    </div>
+<![endif]-->
+
+<script type="text/javascript" src="/scripts/html5.js"></script>
+<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/prettyphoto.js"></script>
+<script type="text/javascript" src="/scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/scripts/cufon-yui.js"></script>
+<style type="text/css">cufon{text-indent:0!important;}@media screen,projection{cufon{display:inline!important;display:inline-block!important;position:relative!important;vertical-align:middle!important;font-size:1px!important;line-height:1px!important;}cufon cufontext{display:-moz-inline-box!important;display:inline-block!important;width:0!important;height:0!important;overflow:hidden!important;text-indent:-10000in!important;}cufon canvas{position:relative!important;}}@media print{cufon{padding:0!important;}cufon canvas{display:none!important;}}</style>
+<script type="text/javascript" src="/scripts/cufon-replace.js"></script>
+<script type="text/javascript" src="/scripts/Scoder_Hand_400.js"></script>
+<script type="text/javascript" src="/scripts/Swis721_Th_BT_400.js"></script>
+<script type="text/javascript" src="/scripts/Swis721_Lt_BT_400.js"></script>
+<script type="text/javascript" src="/scripts/imagepreloader.js"></script>
+<script type="text/javascript" src="/scripts/jcarousellite.js"></script>
+
+<script type="text/javascript">
+var $j = jQuery.noConflict();
+    preloadImages([
+   '/images/facebook.png',
+   '/images/twitter.png']);
+    $j(window).load(function(){
+        $login=$j(".menu-login li a[title='login']");
+        $login.parent('li').removeClass('active');
+        $login.toggle(function(){
+            $login.parent('li').addClass('active');                
+            $j(".moduletable-log").slideDown("normal");
+        }, 
+        function(){
+            $j(".moduletable-log").slideUp("normal");
+            $login.parent('li').removeClass('active');
+        });
+        $j("a[rel^='prettyphoto']").prettyPhoto({theme:'facebook'});
+        $j(".projects li a").hover(function(){
+        $j(this).find("img").stop().animate({opacity:0.5}, "normal")
+    }, function(){
+        $j(this).find("img").stop().animate({opacity:1}, "normal")
+    });
+            function sfas(){n=++n<maxN?n:0
+     $j('.carousel ul ')
+     .stop()
+     .animate({
+     left:-step*n}, 600)};
+     var n=0,
+     maxN=$j('.carousel ul li').length-4,
+     step=173,
+     timer=setInterval(sfas,6000)
+     
+     $j('#carousel .next').click(function(){
+     n=++n<maxN?n:0
+     $j('.carousel ul ')
+     .stop()
+     .animate({
+     left:-step*n
+     }, 600)
+     clearInterval(timer);
+     timer=setInterval(sfas,6000);
+     return false;
+     });
+     
+     
+     $j('#carousel .prev').click(function(){
+     n=--n>=0?n:maxN-1
+     $j('.carousel ul  ')
+     .stop()
+     .animate({
+     left:-step*n
+     }, 600)
+     clearInterval(timer);
+     timer=setInterval(sfas,6000);
+     return false;
+     
+     });
+     $j('.carousel ul  ').hover(function(){clearInterval(timer)},function(){timer=setInterval(sfas,6000)});
+        
+            //rollover hover
+            $j(".carousel li").hover(function() { //On hover...
+            var thumbOver = $j(this).find("img").attr("src"); //Get image url and assign it to 'thumbOver'
+            $j(this).find("a").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
+            //Animate the image to 0 opacity (fade it out)
+            $j(this).find("span").stop().fadeTo('normal', 0 , function() {
+            $j(this).hide() //Hide the image after fade
+            });
+            } , function() { //on hover out...
+            //Fade the image to full opacity
+            $j(this).find("span").stop().fadeTo('normal', 1).show();
+            });
+            
+    });
+</script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="first ">
+<div id="all">
+<div id="header">
+<div class="main">
+<form action="/" method="post">
+<div class="search"><label for="mod-search-searchword">Search...</label><input
+    name="searchword" id="mod-search-searchword" maxlength="20"
+    class="inputbox" size="50" value="Search "
+    onblur="if (this.value=='') this.value='Search ';"
+    onfocus="if (this.value=='Search ') this.value='';" type="text"><input
+    value="Search" class="button" onclick="this.form.searchword.focus();"
+    type="submit"> <input name="task" value="search" type="hidden">
+<input name="option" value="com_search" type="hidden"> <input
+    name="Itemid" value="464" type="hidden"></div>
+</form>
+
+<div class="logoheader">
+<h1 id="logo"><a
+    href="/" title="Growyex"><img
+    src="/images/logo.png" alt=""></a><cufon
+    style="width: 8px; height: 30px;" alt=" " class="cufon cufon-canvas"><canvas
+    style="width: 34px; height: 36px; top: -6px; left: -2px;" height="36"
+    width="34"></canvas><cufontext> </cufontext></cufon><span class="header1"></span></h1>
+</div>
+<!-- end logoheader -->
+<div class="navigation"><!-- debut maximenu_CK, par cedric keiflin sur http://www.joomlack.fr -->
+<div class="maximenuCKH" id="maximenuCK">
+<div class="maxiRoundedleft"></div>
+<div class="maxiRoundedcenter">
+<ul class="menu maximenuCK">
+    <li class="maximenuCK item464 current active level0"
+        style="z-index: 12000;"><a class="maximenuCK "
+        href="/" title=""><span
+        class="titreCK">Home</span></a></li>
+    <li class="maximenuCK item580 level0" style="z-index: 11999;"><a
+        class="maximenuCK "
+        href="/about_us.html"
+        title=""><span class="titreCK">About us</span></a></li>
+    <li class="maximenuCK item466 level0" style="z-index: 11998;"><a
+        class="maximenuCK "
+        href="/portfolio.html"
+        title=""><span class="titreCK">Portfolio</span></a></li>
+    <li class="maximenuCK item465 parent level0 " style="z-index: 11997;"><a
+        class="maximenuCK "
+        href="/services.html"
+        title=""><span class="titreCK">Services</span></a>
+    <div style="height: 111px; left: -999em;" class="floatCK">
+    <div class="maxidrop-top"></div>
+    <div class="maxidrop-main">
+    <div class="maximenuCK2 first">
+    <ul style="position: static;" class="maximenuCK2">
+        <li class="maximenuCK first item484 level1" style="z-index: 11996;"><a
+            class="maximenuCK "
+            href="/design.html"
+            title=""><span class="titreCK">Design</span></a></li>
+        <li class="maximenuCK item485 level1" style="z-index: 11995;"><a
+            class="maximenuCK "
+            href="/development.html"
+            title=""><span class="titreCK">Development</span></a></li>
+        <li class="maximenuCK item486 parent level1" style="z-index: 11994;"><a
+            class="maximenuCK "
+            href="/ideas.html"
+            title=""><span class="titreCK">Ideas</span></a>
+        <div style="width: 0px; left: -999em;" class="floatCK">
+        <div class="maxidrop-top"></div>
+        <div class="maxidrop-main">
+        <div class="maximenuCK2 first">
+        <ul style="position: static;" class="maximenuCK2">
+            <li class="maximenuCK first item596 level2" style="z-index: 11993;"><a
+                class="maximenuCK "
+                href="/design-2.html"
+                title=""><span class="titreCK">Design</span></a></li>
+            <li class="maximenuCK item597 last level2" style="z-index: 11992;"><a
+                class="maximenuCK "
+                href="/development-2.html"
+                title=""><span class="titreCK">Development</span></a></li>
+        </ul>
+        <div class="clr"></div>
+        </div>
+        <div class="clr"></div>
+        </div>
+        <div class="maxidrop-bottom"></div>
+        </div>
+        </li>
+    </ul>
+    <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+    </div>
+    <div class="maxidrop-bottom"></div>
+    </div>
+    </li>
+    <li class="maximenuCK item467 level0" style="z-index: 11991;"><a
+        class="maximenuCK "
+        href="/contacts.html"
+        title=""><span class="titreCK">Contacts</span></a></li>
+</ul>
+</div>
+<div class="maxiRoundedright"></div>
+<div style="clear: both;"></div>
+</div>
+<div style="clear: both;"></div>
+<!-- fin maximenuCK --></div>
+</div>
+</div>

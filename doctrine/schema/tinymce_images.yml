@@ -1,0 +1,18 @@
+TinyMceImages: 
+  columns:
+    id:
+      type: integer(4)
+      autoincrement: true
+      primary: true
+    orig_filename:
+      type: string(255)
+      notnull: true
+    filename:
+      type: string(255)
+      notnull: true
+  actAs:
+    Timestampable:               
+  options:
+    type: INNODB
+    collate: utf8_general_ci
+    charset: utf8
