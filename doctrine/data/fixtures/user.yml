@@ -1,0 +1,5 @@
+User:
+  admin:
+    email: admin@fv.com
+    password: 12345678
+    role: 5

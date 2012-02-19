@@ -1,0 +1,82 @@
+  <link media="screen" rel="stylesheet" href="/css/colorbox.css" />
+  <script type="text/javascript" src="/js/jquery-1.6.4.min.js"></script>
+  <script  type="text/javascript" src="/js/jquery.colorbox-min.js"></script>
+  <script type="text/javascript" >
+        $(document).ready(function(){
+            //Examples of how to assign the ColorBox event to elements
+            $(".image-wrap").colorbox({rel:'image-wrap'});
+            $(".callbacks").colorbox({
+                onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+                onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+                onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+                onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+                onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+            });
+            
+            //Example of preserving a JavaScript event for inline calls.
+            $("#click").click(function(){ 
+                $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+                return false;
+            });
+        });
+  </script>
+<div class="primary_content_wrap">
+    <div class="container_24 clearfix">
+        <div class="grid_24">
+            <div class="wrapper">
+            <div class="post-287 portfolio type-portfolio status-publish hentry post" id="post-287">
+      <article class="single-post">
+        <header>
+          <h1><?=$this->work->name?></h1>
+        </header>
+                  <div class="featured-thumbnail">
+                  
+<?php 
+    $images = array();
+    $m = false;
+    $random = rand(10,1000);
+    for ($i=1;$i<=30;$i++) {
+        $image = "image".$i;
+        if (!empty($this->work->$image)) {
+            if ($m==false) {
+            ?>
+                  <a class="image-wrap" title="<?=$this->work->name?>" href="/images/works/<?=$this->work->id?>/<?=$this->work->$image?>?<?=$random?>">
+                  <img width="480" height="270" title="<?=$this->work->name?>" alt="<?=$this->work->name?>" class="attachment-portfolio-post-thumbnail-large wp-post-image" src="/images/works/<?=$this->work->id?>/<?=$this->work->id?>_first.jpg?<?=$random?>"></a></div>
+
+           <?php
+               $m = true;
+            } else {
+            ?> 
+              <a style="display:none;" class="image-wrap" href="/images/works/<?=$this->work->id?>/<?=$this->work->$image?>?<?=$random?>" title=""></a>
+           <?php
+            }
+           
+        }
+    }
+?>
+                  
+<div class="post-content"><p>
+<?=$this->work->description?>
+<hr>
+<?php echo "<span style=\"float:left;\"><a href=/admin/work/{$this->work->category_id}/index.html>К списку</a></span>";?>
+<?php echo "<a  style=\"float:right;\" href=/admin/work/{$this->work->id}/editwork.html>Редактировать</a>";?>
+</p>
+</div><!--.post-content-->
+      </article>
+    </div><!-- #post-## -->
+    
+    
+<!-- You can start editing here. -->
+
+
+            <!-- If comments are closed. -->
+        <!--p class="nocomments">Comments are closed.</p-->
+
+    
+
+
+  
+                </div><!--.wrapper-->
+         </div><!--.grid_24-->
+      </div><!--.container-->
+   </div>

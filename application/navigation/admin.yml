@@ -1,0 +1,10 @@
+Pages:
+  -
+    type: FinalView_Navigation_Page
+    route: AdminIndexIndex
+    label: Category
+    class: first
+  -
+    type: FinalView_Navigation_Page
+    route: AdminCmsIndex
+    label: Cms

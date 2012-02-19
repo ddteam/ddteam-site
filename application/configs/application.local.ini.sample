@@ -1,0 +1,6 @@
+[development]
+; path to magic file for windows platform. Uncomment this string only if your environment is Windows
+;magicfile = APPLICATION_PATH "/../library/magic/windows/magic"
+
+;doctrine.connection_string = "mysql://root:@localhost/user_module"
+;zf_debug = 1

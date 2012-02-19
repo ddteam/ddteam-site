@@ -1,0 +1,54 @@
+Work:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    status:
+      type: integer(1)
+      notnull: true
+    name:
+      type: string(50)
+      notnull: true
+    date:
+      type: string(50)
+      notnull: true
+    description:
+      type: clob
+      notnull: true
+    image1:
+      type: string(128)
+    image2:
+      type: string(128)
+    image3:
+      type: string(128)
+    image4:
+      type: string(128)
+    image5:
+      type: string(128)
+    image6:
+      type: string(128)
+    image7:
+      type: string(128)
+    image8:
+      type: string(128)
+    titlehead:
+      type: string(255)
+      notnull: true
+    keywordshead:
+      type: string(255)
+      notnull: true
+    descriptionhead:
+      type: string(255)
+      notnull: true
+  actAs:
+    Timestampable:
+      created:
+        expression: NOW()
+      updated:
+        expression: NOW()
+    FinalView_Doctrine_Template_Sortable:
+  options:
+    type: INNODB
+    collate: utf8_general_ci
+    charset: utf8

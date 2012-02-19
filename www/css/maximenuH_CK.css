@@ -1,0 +1,489 @@
+
+.clr {clear:both;}
+
+/**
+** global styles
+**/
+
+/* container style */
+.navigation div#maximenuCK ul.maximenuCK {
+    padding :0;
+    margin : 0;
+    z-index:1;
+}
+
+.navigation #maximenuCK {
+    margin:0;
+    padding:0;
+    
+}
+
+.navigation div#maximenuCK ul.maximenuCK > li.maximenuCK {
+    background : none;
+    list-style : none;
+    border : none;
+    margin:0 0 0 0px;
+    
+    
+}
+.navigation div#maximenuCK ul.maximenuCK > li.maximenuCK:first-child {  margin:0 0 0 3px;}
+.navigation div#maximenuCK ul.maximenuCK strong {
+    font-weight:bold;
+}
+
+/* link image style */
+.navigation div#maximenuCK ul.maximenuCK li.maximenuCK>a img {
+    margin : 3px;
+    border : none;
+}
+
+/* img style without link (in separator) */
+.navigation div#maximenuCK ul.maximenuCK li.maximenuCK img {
+    border : none;
+}
+
+.navigation div#maximenuCK ul.maximenuCK > li > a.maximenuCK {
+    text-decoration : none;
+    outline : none;
+    border : none;
+    cursor : pointer;
+    color : #000;
+    text-transform:lowercase;
+    font-size:14px;
+    line-height:14px;
+    display:block;
+    float:left;
+    text-align:center;
+    padding:0px 25px 0 25px;
+    border-left:1px dotted #a0a4a6;
+
+}
+
+.navigation div#maximenuCK ul.maximenuCK li:first-child a {
+    border:0;
+}
+
+ .navigation div#maximenuCK ul.maximenuCK > li.current > a.maximenuCK,  .navigation div#maximenuCK ul.maximenuCK > li.active > a.maximenuCK {
+    font-weight:bold;
+    font-size:13px;
+     
+}
+.navigation div#maximenuCK ul.maximenuCK > li > a.maximenuCK:hover, .navigation div#maximenuCK ul.maximenuCK > li.sfhover > a {
+    text-decoration:underline;
+     
+}
+
+ul.maximenuCK li a:hover, ul.maximenuCK li a:hover span, .navigation div#maximenuCK ul.maximenuCK > li.sfhover > a > span {
+
+
+}
+div#maximenuCK ul.maximenuCK li .separator {
+    text-decoration : none;
+    height : 27px;
+    outline : none;
+    background : none;
+    border : none;
+    padding :7px 0 0 0;
+    color : #636d67;
+    font-size:24px;
+    text-transform:uppercase;
+    display:block
+}
+.navigation div#maximenuCK ul.maximenuCK2 li  {
+color:#000;
+}
+.navigation div#maximenuCK ul.maximenuCK2 li:first-child  {
+    border-top:none !important
+}
+.navigation div#maximenuCK ul.maximenuCK2 li a.maximenuCK {
+    text-decoration : none;
+    outline : none;
+    background : none;
+    border : none;
+    height:auto;
+    padding:0;
+    cursor : pointer;
+    color : #000;
+    font-size:12px;
+    text-transform:none;
+    font-weight:normal;
+}
+.navigation div#maximenuCK ul.maximenuCK2 li a.maximenuCK strong{
+    font-weight:bold;
+}
+
+/* separator item */
+.navigation div#maximenuCK ul.maximenuCK li span.separator {
+
+}
+/**
+** active items
+**/
+
+/* current item title and description */
+.navigation div#maximenuCK ul.maximenuCK li.current>a strong {
+font-weight:bold;
+}
+
+/* current item title when mouseover */
+.navigation div#maximenuCK ul.maximenuCK li.current>a:hover span.titreCK {
+
+}
+
+/* current item description when mouseover */
+.navigation div#maximenuCK ul.maximenuCK li.current>a:hover span.descCK {
+
+}
+
+/* active parent title */
+.navigation div#maximenuCK ul.maximenuCK li.active>a span.titreCK {
+
+}
+
+/* active parent description */
+.navigation div#maximenuCK ul.maximenuCK li.active>a span.descCK {
+
+}
+
+/**
+** first level items
+**/
+
+
+.navigation div#maximenuCK ul.maximenuCK {
+    margin-left:0px;
+}
+
+.navigation div#maximenuCK ul.maximenuCK li.level0 a {
+    
+}
+.navigation div#maximenuCK ul.maximenuCK li:first-child a {
+    
+}
+.navigation div#maximenuCK ul.maximenuCK li.level0 li a {
+    width:118px !important;
+    color:#fff;
+    font-size:13px;
+    padding-left:0px;
+    margin-left:24px;
+	line-height:24px;
+    text-decoration:none;
+    font-weight:normal !important;
+}
+.navigation div#maximenuCK ul.maximenuCK li.level0 li a span {}
+.navigation div#maximenuCK ul.maximenuCK li.level0 li:first-child a {
+    background:none;
+    border:none;
+}
+.navigation div#maximenuCK ul.maximenuCK li:first-child li a {
+    padding-left:0px !important;
+    padding-right:0 !important;
+}
+.navigation div#maximenuCK ul.maximenuCK li.level1 {
+    font-weight:bold !important;
+}
+
+.navigation div#maximenuCK ul.maximenuCK li.level0 li:hover > a > span, .navigation div#maximenuCK ul.maximenuCK li.level0 li.active > a > span, .navigation div#maximenuCK ul.maximenuCK li.level0 li.current > a > span {text-decoration:underline;}
+
+
+
+
+/* first level item title */
+.navigation div#maximenuCK ul.maximenuCK li.level0>a span.titreCK {
+   
+}
+
+/* first level item description */
+.navigation div#maximenuCK ul.maximenuCK li.level0>a span.descCK {
+    
+    font-size:12px
+}
+.descCK {
+    
+    font-size:12px !important
+}
+
+/* first level item link */
+.navigation div#maximenuCK ul.maximenuCK li.parent.level0>a {
+    /*background : none;*/
+}
+
+/* parent style level 0 */
+.navigation div#maximenuCK ul.maximenuCK li.parent.level0 li.parent {
+
+}
+.navigation div#maximenuCK ul.maximenuCK li.parent.level0 li.parent > a{
+    
+}
+
+/**
+** items title and descriptions
+**/
+/* item title */
+
+/* item description */
+.navigation div#maximenuCK span.descCK {
+    color : #c0c0c0;
+    display : block;
+    text-transform : none;
+    font-size : 10px;
+    text-decoration : none;
+    height : 12px;
+    line-height : 12px;
+    float : none !important;
+    float : left;
+}
+
+/* item title when mouseover */
+
+
+/**
+** child items
+**/
+
+/* child item title */
+.navigation div#maximenuCK ul.maximenuCK2  a.maximenuCK {
+    width : 160px;
+    
+}
+.maximenuCK2 {
+    border:0;
+    padding:6px 0 12px 0 !important;
+    background:#3a4246;
+ 
+}
+
+   
+.navigation div#maximenuCK ul.maximenuCK2 li a.maximenuCK {
+    text-decoration : none;
+    margin : 0 auto;
+    font-weight:bold;
+    padding : 0px 0 0px 0;
+    
+    
+}
+
+/* child item block */
+.navigation div#maximenuCK ul.maximenuCK ul.maximenuCK2 {
+    margin : 0px 0 0 0;
+    padding : 0;
+    border : none;
+     /* important for Chrome and Safari compatibility */
+     
+}
+
+
+.navigation div#maximenuCK ul.maximenuCK2 li.maximenuCK {
+    
+    padding : 0px;
+    border : none;
+    margin : 0;
+    font-weight:bold;
+    background : none;
+    text-align:left;
+    
+}
+
+/* child item container  */
+
+/**
+** module style
+**/
+
+.navigation div#maximenuCK div.maximenuCK_mod {
+    width : 170px;
+    padding : 15px;
+    overflow : hidden;
+    color : #ddd;
+    white-space : normal;
+}
+
+.navigation div#maximenuCK div.maximenuCK_mod div.moduletable {
+    border : none;
+    background : none;
+}
+
+.navigation div#maximenuCK div.maximenuCK_mod  fieldset{
+    padding : 0;
+    margin : 0 auto;
+    overflow : hidden;
+    background : #1a1a1a;
+    border : none;
+}
+
+.navigation div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod a {
+    border : none;
+    margin : 0;
+    padding : 0;
+    display : inline;
+    background : none;
+    color : #888;
+    font-weight : normal;
+}
+
+.navigation div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod a:hover {
+    color : #000;
+}
+
+/* module title */
+.navigation div#maximenuCK ul.maximenuCK div.maximenuCK_mod h3 {
+    font-size : 14px;
+    width : 170px;
+    color : #aaa;
+    font-size : 14px;
+    font-weight : normal;
+    background : #444;
+    margin : 5px 0 0 0;
+    padding : 3px 0 3px 0;
+}
+
+.navigation div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod ul {
+    margin : 0;
+    padding : 0;
+    width : 170px;
+    background : none;
+    border : none;
+    text-align : left;
+}
+
+.navigation div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod li {
+    margin : 0 0 0 15px;
+    padding : 0;
+    width : 155px;
+    background : none;
+    border : none;
+    text-align : left;
+    font-size : 11px;
+    float : none;
+    display : block;
+    line-height : 20px;
+    white-space : normal;
+}
+
+/* login module */
+.navigation div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod #form-login ul {
+    left : 0;
+    margin : 0;
+    padding : 0;
+    width : 170px;
+}
+
+.navigation div#maximenuCK ul.maximenuCK2 div.maximenuCK_mod #form-login ul li {
+    margin : 2px 0;
+    padding : 0 5px;
+    height : 20px;
+    background : #1a1a1a;
+}
+
+
+/**
+** columns width & child position
+**/
+
+/* child blocks position (from level2 to n) */
+.navigation div#maximenuCK ul.maximenuCK li.maximenuCK div.floatCK div.floatCK {
+    margin : -39px 0 0 137px;
+    background:none;
+}
+
+/* margin for overflown elements that rolls to the left */
+.navigation div#maximenuCK ul.maximenuCK li.maximenuCK div.floatCK div.floatCK.fixRight  {
+    margin-right : 188px;
+}
+
+/* default width */
+.navigation div#maximenuCK ul.maximenuCK li div.floatCK {
+    width : 142px;
+    margin:0px 0 0 0px;
+    z-index:9999;
+    padding:15px 0 0 0;
+    background:none;
+ 
+}
+
+
+
+
+/* 2 cols width */
+.navigation div#maximenuCK ul.maximenuCK li div.cols2 {
+    width : 360px;
+}
+
+.navigation div#maximenuCK ul.maximenuCK li div.cols2>div.maximenuCK2 {
+    width : 50%;
+}
+
+/* 3 cols width */
+.navigation div#maximenuCK ul.maximenuCK li div.cols3 {
+    width : 540px;
+}
+
+.navigation div#maximenuCK ul.maximenuCK li div.cols3>div.maximenuCK2 {
+    width : 33%;
+}
+
+/* 4 cols width */
+.navigation div#maximenuCK ul.maximenuCK li div.cols4 {
+    width : 720px;
+}
+
+.navigation div#maximenuCK ul.maximenuCK li div.cols4>div.maximenuCK2 {
+    width : 25%;
+}
+
+
+
+/**
+** fancy parameters
+**/
+
+.navigation div#maximenuCK .maxiFancybackground {
+    list-style : none;
+}
+
+.navigation div#maximenuCK .maxiFancybackground, .navigation div#maximenuCK ul.maximenuCK li.level0.current {
+
+   
+
+}
+.navigation div#maximenuCK ul.maximenuCK li.level0.current > strong {  color:#fff !important;}
+
+.navigation div#maximenuCK .maxiFancybackground .maxiFancyleft {
+
+}
+
+.navigation div#maximenuCK .maxiFancybackground .maxiFancyright {
+
+}
+
+/**
+** rounded style
+**/
+
+/* global container */
+.navigation div#maximenuCK div.maxiRoundedleft {
+
+}
+
+.navigation div#maximenuCK div.maxiRoundedcenter {
+
+}
+
+.navigation div#maximenuCK div.maxiRoundedright {
+
+}
+
+/* child container */
+.navigation div#maximenuCK div.maxidrop-top {
+
+}
+
+.navigation div#maximenuCK div.maxidrop-main {
+
+}
+
+.navigation div#maximenuCK div.maxidrop-bottom {
+
+}
+
+

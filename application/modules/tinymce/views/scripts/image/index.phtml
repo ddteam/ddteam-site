@@ -1,0 +1,26 @@
+<div id="images_list" style="overflow:auto;height:270px;">
+    <?foreach($this->images as $image):?>
+        <div style="float:left;padding-left:15px;">
+            <?=$this->thumbnail($image->getSrc(), 100, 100);?>
+            <input id="full_src_<?=$image->id?>" type="hidden" value="<?=$image->getSrc();?>">
+            <div>
+                <a id="image_<?=$image->id?>" class="insert-image-link" href="">Insert Image</a><br />
+                <a class="delete-image-link" href="<?=$this->url(array('id' => $image->id), 'TinymceImageDelete' )?>/">Delete Image</a> 
+            </div>
+        </div>
+    <?endforeach;?> 
+</div>
+<div style="clear:both;"></div>
+
+<div align="center" id="formContainer" style="padding-top:20px;"> 
+    <?=$this->uploadForm->setAction($this->url(array(), 'TinymceImageIndex' ) )->setAttrib('id', 'uploadForm');?>
+</div>
+
+<script>
+    $('.insert-image-link').click(function(){
+        var id = $(this).attr('id');
+        id = id.substr(6);
+        opener.document.forms[0].src.value = $('#full_src_' + id).val();
+        window.close();        
+    });  
+</script>

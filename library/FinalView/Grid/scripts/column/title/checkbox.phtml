@@ -1,0 +1,6 @@
+<input type="checkbox" class="grid-checkbox-title-<?=$this->column->getName()?>" name="<?=$this->column->getName()?>_title" value="">
+<script>
+    $('.grid-checkbox-title-<?=$this->column->getName()?>').click(function(){
+        $('.grid-checkbox-<?=$this->column->getName()?>').attr('checked', Boolean($(this).attr('checked')) );        
+    });
+</script>

@@ -1,0 +1,97 @@
+		<link href="/css/default.css" rel="stylesheet" type="text/css" />
+		<link href="/css/uploadify.css" rel="stylesheet" type="text/css" />
+		<link href="/css/jquery.Jcrop.css" rel="stylesheet" type="text/css" /> 
+		<script type="text/javascript" src="/scripts/swfobject.js"></script>
+		<script type="text/javascript" src="/scripts/jquery.uploadify.v2.1.4.min.js"></script>
+		<script type="text/javascript" src="/scripts/jquery-impromptu.3.1.min.js"></script>
+		<script type="text/javascript" src="/scripts/jquery.Jcrop.min.js"></script>
+		<script type="text/javascript" src="/scripts/jquery-uberuploadcropper.js"></script> 
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+<?php 
+	for ($i=1;$i<=30;$i++) {
+echo "	
+
+$('#UploadPhoto$i').uberuploadcropper({
+		//---------------------------------------------------
+		// uploadify options..
+		//---------------------------------------------------
+		'uploader'  : '/scripts/uploadify.swf',
+		'script'    : '/uploadify/uploadify.php',
+		'cancelImg' : '/uploadify/cancel.png',
+		'multi'     : false,
+		'auto'      : true,
+		'folder'    : '/uploads',
+		'fileDesc'  : 'JPG',
+		'fileExt'   : '*.jpg;*.jpeg;*.JPG;*.JPEG',
+		//---------------------------------------------------
+		//now the cropper options..
+		//---------------------------------------------------
+		'aspectRatio': 16 / 9, 
+		'allowSelect': false,			//can reselect
+		'allowResize' : true,			//can resize selection
+		'setSelect': [ 0, 0, 1000, 562 ],	//these are the dimensions of the crop box x1,y1,x2,y2
+		'minSize': [ 1000, 562 ],		//if you want to be able to resize, use these
+		'cropScript': '/uploadify/crop.php',
+		'onComplete': function(imgs,data){ 
+			$('#PhotoPrev$i').attr('src','/uploads/'+imgs[0].name +'?d='+ (new Date()).getTime()); 
+			$('#file-$i').attr('value','/uploads/'+imgs[0].name);
+		}
+	});
+	
+	";    
+}  
+?>
+	
+});
+</script>
+<div id="zendform" class="zendform">
+<form enctype="application/x-www-form-urlencoded" class="global_form" id="editform" action="" method="post">
+<div><h3>Новая работа</h3> 
+<div class="form-elements"> 
+<dl class="zend_form">
+<?=$this->form->name?>
+<?=$this->form->date?>
+<?=$this->form->category_id?>
+<?=$this->form->status?>
+<?=$this->form->description?>
+<?=$this->form->titlehead?>
+<?=$this->form->keywordshead?>
+<?=$this->form->descriptionhead?>
+     
+
+
+<table>
+	<tr>
+<?php 
+for ($i=1;$i<=30;$i++) {
+$item = $i;
+
+echo "<td>\n";
+
+	
+echo $this->form->$i;
+echo '<input type="file" name="UploadPhoto'.$i.'" id="UploadPhoto'.$i.'" /> 
+		<img style="float:right;" src="/images/photo_not_available.png" id="PhotoPrev'.$i.'" alt="Photo Preview" />
+		<hr>
+</td>
+		';
+ if (($item/3) == floor($item/3)) {echo "\n</tr>\n<tr>\n";}    
+}
+?>
+</tr>
+
+</table>
+<div><?=$this->form->submit?></div>
+</dl>
+</div>
+</div>
+</form>
+</div>
+<BR><BR><BR>
+
+
+

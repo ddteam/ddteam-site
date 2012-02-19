@@ -1,0 +1,146 @@
+routes:
+  AdminIndexIndex:
+    type: Zend_Controller_Router_Route_Static
+    route: admin/index.html
+    defaults: 
+      module: admin
+      controller: index
+      action: index
+
+  AdminIndexWorkview:
+    type: Zend_Controller_Router_Route
+    route: /admin/:id/workview.html
+    defaults: 
+      module: admin
+      controller: index
+      action: workview
+
+  AdminIndexWork:
+    type: Zend_Controller_Router_Route_Static
+    route: /work
+    defaults: 
+      module: admin
+      controller: index
+      action: work
+
+  AdminWorkUp:
+    type: Zend_Controller_Router_Route
+    route: admin/work/:id/up.html
+    defaults: 
+      module: admin
+      controller: work
+      action: up
+
+  AdminWorkDown:
+    type: Zend_Controller_Router_Route
+    route: admin/work/:id/down.html
+    defaults: 
+      module: admin
+      controller: work
+      action: down
+
+  AdminWorkView:
+    type: Zend_Controller_Router_Route
+    route: admin/work/:id/view.html
+    defaults: 
+      module: admin
+      controller: work
+      action: viewwork
+      
+  AdminWorkDelwork:
+    type: Zend_Controller_Router_Route
+    route: admin/work/:id/delwork.html
+    defaults: 
+      module: admin
+      controller: work
+      action: delwork
+
+  AdminWorkEdit:
+    type: Zend_Controller_Router_Route
+    route: admin/work/:id/editwork.html
+    defaults: 
+      module: admin
+      controller: work
+      action: editwork
+
+  AdminWorkNewwork:
+    type: Zend_Controller_Router_Route_Static
+    route: admin/work/newwork.html
+    defaults: 
+      module: admin
+      controller: work
+      action: Newwork
+
+  AdminAuthLogin:
+    type: Zend_Controller_Router_Route_Static
+    route: admin/login.html
+    defaults: 
+      module: admin
+      controller: auth
+      action: login
+
+  AdminAuthLogout:
+    type: Zend_Controller_Router_Route_Static
+    route: admin/logout.html
+    defaults: 
+      module: admin
+      controller: auth
+      action: logout
+      
+  AdminUserIndex: 
+    type: Zend_Controller_Router_Route_Static
+    route: admin/user.html
+    defaults: 
+      module: admin
+      controller: user
+      action: index
+
+  AdminUserEdit: 
+    type: Zend_Controller_Router_Route
+    route: admin/:user_id/edit-user.html
+    defaults: 
+      module: admin
+      controller: user
+      action: edit 
+      
+  AdminCmsIndex: 
+    type: Zend_Controller_Router_Route_Static
+    route: admin/cms.html
+    defaults: 
+      module: admin
+      controller: cms
+      action: index
+
+  AdminCmsEditPage: 
+    type: Zend_Controller_Router_Route
+    route: admin/cms-page/:page_name/edit.html
+    defaults: 
+      module: admin
+      controller: cms
+      action: edit-page
+
+  AdminCmsAddPage: 
+    type: Zend_Controller_Router_Route_Static
+    route: admin/cms-page/add.html
+    defaults: 
+      module: admin
+      controller: cms
+      action: add-page
+
+  AdminCmsDeletePage: 
+    type: Zend_Controller_Router_Route
+    route: admin/cms-page/:page_name/delete.html
+    defaults: 
+      module: admin
+      controller: cms
+      action: delete-page
+      
+  UserIndexChangefbstatus: 
+    type: Zend_Controller_Router_Route
+    route: admin/:work_id/:image_id/deleteimage
+    defaults: 
+      module: admin
+      controller: work
+      action: deleteimage
+    format: html
+    XMLHttpRequest: true

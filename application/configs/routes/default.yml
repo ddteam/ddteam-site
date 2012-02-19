@@ -1,0 +1,17 @@
+routes:
+  DefaultIndexIndex:
+    type: Zend_Controller_Router_Route_Static
+    route:
+    defaults:
+      module: default
+      controller: index
+      action: index
+  DefaultIndexWorkview:
+    type: Zend_Controller_Router_Route
+    route: /:work_id/work.html
+    defaults:
+      module: default
+      controller: index
+      action: workview
+
+#   need the last line, for some reason it is not parse by Zend_Config_Yaml

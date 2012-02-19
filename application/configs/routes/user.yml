@@ -1,0 +1,41 @@
+routes:
+  UserRegisterRegister: 
+    type: Zend_Controller_Router_Route_Static
+    route: user/register.html
+    defaults: 
+      module: user
+      controller: register
+      action: register
+
+  UserAuthLogin: 
+    type: Zend_Controller_Router_Route_Static
+    route: user/login.html
+    defaults: 
+      module: user
+      controller: auth
+      action: login
+
+  UserAuthLogout: 
+    type: Zend_Controller_Router_Route_Static
+    route: user/logout.html
+    defaults: 
+      module: user
+      controller: auth
+      action: logout
+
+  UserIndexIndex: 
+    type: FinalView_Controller_Router
+    route: user/{:user_id/}index.html
+    defaults: 
+      module: user
+      controller: index
+      action: index
+      
+  UserRegisterConfirmation: 
+    type: Zend_Controller_Router_Route
+    route: user/role/:role/:email/resend-confirmation.html
+    defaults: 
+      module: user
+      controller: register
+      action: confirmation
+            
